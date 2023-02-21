@@ -1,0 +1,26 @@
+server:
+  port:8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test #    url: jdbc:mysql://localhost:3306/tis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+  jackson:
+    time-zone: GMT+8
+  jpa:
+    properties:
+      open-in-view: true
+      hibernate:
+        show_sql: false
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+        hbm2ddl:
+          auto: update
+    database: postgresql
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.demo.mapper
