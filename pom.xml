@@ -106,6 +106,12 @@
             <artifactId>spatio-temporal-wps</artifactId>
             <version>27-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <repositories>

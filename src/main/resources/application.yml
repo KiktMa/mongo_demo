@@ -1,5 +1,5 @@
-server:
-  port:8080
+#server:
+#  port:8080
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/test #    url: jdbc:mysql://localhost:3306/tis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
@@ -20,6 +20,12 @@ spring:
         hbm2ddl:
           auto: update
     database: postgresql
+  data:
+    mongodb:
+      host: 192.168.163.133
+      database: comment
+      port: 27017
+      # uri: mongodb://192.168.163.133:27017/comment
 
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
